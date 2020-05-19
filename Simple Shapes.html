@@ -67,6 +67,10 @@
                     <br><br>
                     <h5>How many shapes are above?</h5>
                     <input type = "text" name = "number of shapes = 9">
+                    p>0 tens + 4 ones = </p>
+                    <input id = "text_a" type = "number" name = "4"><br>
+                    <p id="answer9"></p>
+                    <button onclick = "answersto9();">Done</button><br><br>
                 </div>
             </div>
         <!--- </Songs> -->
@@ -135,8 +139,21 @@
             </footer>
         <!--- </Footer> -->
         <script type = "text/javascript">
-            function answers()
+            function answersto9()
             {
+                var a=document.getElementById("text_a").value;
+                if (a=="9")
+                {
+                document.getElementById("answer9").innerHTML="Correct!";
+                }
+                else if (a=="09")
+                {
+                document.getElementById("answer9").innerHTML="Correct!";
+                }
+                else
+                {
+                document.getElementById("answer9").innerHTML="Oops! Try again!";
+                }
                 alert("Ask your mom or dad to help you learn the a few shapes, then click the back button on the top of the page to learn something else!");
             }
         </script>
